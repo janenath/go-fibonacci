@@ -13,9 +13,9 @@ class App extends React.Component {
       submitted: false,
       error: false
     }
-}
+  }
 
-  validInput = new RegExp(/1/);
+  validInput = new RegExp(/^[1-9][0-9]?$|^100$/);
 
   handleChange = (e) => {
     this.setState({
