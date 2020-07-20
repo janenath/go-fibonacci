@@ -47,7 +47,7 @@ class App extends React.Component {
       )
     } else if (this.state.submitted == true) {
       return (
-        <Result />
+        <Result value={this.state.value}/>
       )
     } else {
       return (
