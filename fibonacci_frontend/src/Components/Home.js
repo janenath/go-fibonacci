@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
-import {
-    BrowserRouter as Router,
-    Link
-  } from "react-router-dom";
 
 class Home extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
     render() {
         return (
             <div className="homeContainer">
                 <h2>type a number</h2>
-                <input type="text" value="1"></input>
-                <Link to="./Result" className="goLink">go!</Link>
+                <input type="text">{this.props.input}</input>
+                <div className="goLink" onClick={this.props.handleSubmit}>go!</div>
             </div>
         )
     }

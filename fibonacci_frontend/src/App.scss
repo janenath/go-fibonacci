@@ -2,6 +2,7 @@
 
 $yellow: #ebce88;
 
+
 body {
     font-family: 'Josefin Sans', Helvetica, sans-serif;
     text-align: center;
@@ -21,22 +22,43 @@ body {
         background-size: 100vw;
     }
 }
+h2 {
+    color: white;
+    font-size: 3em;
+    margin-bottom: 20px;
+    @media (max-height: 750px) {
+        font-size: 2em;
+    }
+    @media (max-height: 500px) {
+        font-size: 1em;
+    }
+    @media (max-width: 500px) {
+        font-size: 1em;
+    }
+}
+a {
+    text-decoration: inherit;
+    background: none;
+    color: black;
+    font-size: 2em;
+    letter-spacing: .1em;
+    @media (max-height: 750px) {
+        font-size: 1.5em;
+        padding: 0.7em;
+    }
+    @media (max-height: 450px) {
+        font-size: 1em;
+    }
+    @media (max-width: 500px) {
+        font-size: 1em;
+        padding: 0.7em;
+    }
+}
+a:hover {
+    text-decoration: underline;
+}
 
 .homeContainer {
-    h2 {
-        color: white;
-        font-size: 3em;
-        margin-bottom: 20px;
-        @media (max-height: 750px) {
-            font-size: 2em;
-        }
-        @media (max-height: 500px) {
-            font-size: 1em;
-        }
-        @media (max-width: 500px) {
-            font-size: 1em;
-        }
-    }
     input {
         margin: 30px;
         padding: 20px;
@@ -59,27 +81,14 @@ body {
             padding: 5px;
             margin: 5px;
         }
-    }  
-    .goLink {
-        text-decoration: inherit;
-        color: black;
-        font-size: 2em;
-        letter-spacing: .1em;
-        @media (max-height: 750px) {
-            font-size: 1.5em;
-            padding: 0.7em;
-        }
-        @media (max-height: 450px) {
-            font-size: 1em;
-        }
-        @media (max-width: 500px) {
-            font-size: 1em;
-            padding: 0.7em;
-        }
-    }
-    .goLink:hover {
-        text-decoration: underline;
-    }
+    } 
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } 
+
 }
 
 
@@ -109,5 +118,14 @@ body {
     }
     a:hover {
         color: $yellow;
+    }
+}
+
+
+.errorContainer {
+    p {
+        font-size: 2em;
+        color: white;
+        padding: 1em;
     }
 }

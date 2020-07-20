@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import {
-    BrowserRouter as Router,
-    Link
-  } from "react-router-dom";
 
 class Result extends React.Component {
     render() {
@@ -12,7 +8,7 @@ class Result extends React.Component {
                 <div className="outputContainer">
                     <p className="fibonacciResult"></p>
                 </div>
-                <div className="startOverLink"><Link to="./">start over</Link></div>
+                <div className="startOverLink"><a href="./">start over</a></div>
             </div>
         )
     }
